@@ -1,5 +1,6 @@
 import './LandingPage.css'
 import RoleButton from '../components/RoleButton'
+import foodBridgeLogo from '../assets/foodbridge-logo.png'
 
 function LandingPage() {
   return (
@@ -7,7 +8,14 @@ function LandingPage() {
       <div className="landing-card">
         <p className="tagline">Food Donation & Reselling Platform</p>
 
-        <h1 className="landing-title">FoodBridge</h1>
+        <div className="brand-row">
+          <img
+            src={foodBridgeLogo}
+            alt="FoodBridge Logo"
+            className="brand-logo"
+          />
+          <h1 className="landing-title">FoodBridge</h1>
+        </div>
 
         <p className="landing-text">
           Reduce food wastage by connecting food givers with NGOs, orphanages,

@@ -1,6 +1,14 @@
+import { useNavigate } from 'react-router-dom'
+
 function RoleButton({ role, description }) {
+  const navigate = useNavigate()
+
   const handleClick = () => {
-    alert(`You selected ${role}`)
+    if (role === 'Food Giver') {
+      navigate('/giver')
+    } else if (role === 'Food Receiver') {
+      navigate('/receiver')
+    }
   }
 
   return (
