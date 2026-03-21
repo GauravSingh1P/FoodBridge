@@ -5,6 +5,7 @@ function FoodListingForm() {
   const [quantity, setQuantity] = useState('')
   const [foodType, setFoodType] = useState('')
   const [location, setLocation] = useState('')
+  const [listingType, setListingType] = useState('')
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -14,6 +15,7 @@ function FoodListingForm() {
       quantity,
       foodType,
       location,
+      listingType,
     }
 
     console.log('Food Listing Submitted:', foodData)
@@ -160,8 +162,45 @@ function FoodListingForm() {
               fontSize: '15px',
             }}
           />
-        </div>
-      </div>
+          <div style={{ marginTop: '20px' }}>
+                <label
+                        style={{
+                        display: 'block',
+                        marginBottom: '10px',
+                        fontWeight: '600',
+                        color: '#374151',
+                                }}
+                >
+                Listing Type
+                </label>
+
+                        <div style={{ display: 'flex', gap: '20px' }}>
+                <label>
+                        <input
+                            type="radio"
+                            name="listingType"
+                            value="donate"
+                            checked={listingType === 'donate'}
+                            onChange={(e) => setListingType(e.target.value)}
+                        />
+                        Donate (Free)
+                </label>
+
+                    <label>
+                    <input
+                        type="radio"
+                        name="listingType"
+                        value="sell"
+                        checked={listingType === 'sell'}
+                        onChange={(e) => setListingType(e.target.value)}
+                    />
+                    Sell (Low Cost)
+                    </label>
+                        </div>
+                        </div>
+                            
+                        </div>
+                        </div>
 
       <button
         type="submit"
