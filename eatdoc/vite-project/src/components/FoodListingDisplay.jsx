@@ -45,7 +45,7 @@ function FoodListingDisplay() {
       >
         Browse the currently available food shared by givers on FoodBridge.
       </p>
-        
+
       <div
         style={{
           display: 'grid',
@@ -103,6 +103,43 @@ function FoodListingDisplay() {
             >
               <strong>Location:</strong> {item.location}
             </p>
+
+         
+            <div style={{ marginTop: '16px' }}>
+              {item.foodType === 'Donate' ? (
+                <button
+                  onClick={() => alert(`Request sent for ${item.foodName}`)}
+                  style={{
+                    width: '100%',
+                    padding: '10px',
+                    borderRadius: '12px',
+                    border: 'none',
+                    background: 'linear-gradient(135deg, #16a34a, #15803d)',
+                    color: '#fff',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                  }}
+                >
+                  Request Food
+                </button>
+              ) : (
+                <button
+                  onClick={() => alert(`Proceed to buy ${item.foodName}`)}
+                  style={{
+                    width: '100%',
+                    padding: '10px',
+                    borderRadius: '12px',
+                    border: 'none',
+                    background: '#1f2937',
+                    color: '#fff',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                  }}
+                >
+                  Buy Food
+                </button>
+              )}
+            </div>
           </div>
         ))}
       </div>
