@@ -1,3 +1,4 @@
+import FoodListingDisplay from '../components/FoodListingDisplay'
 function ReceiverPage() {
   return (
     <div
@@ -58,7 +59,7 @@ function ReceiverPage() {
             them.
           </p>
         </div>
-
+            <FoodListingDisplay />
         <div
           style={{
             display: 'grid',
