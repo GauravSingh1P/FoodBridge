@@ -1,3 +1,4 @@
+import FoodListingForm from '../components/FoodListingForm'
 function GiverPage() {
   return (
     <div
@@ -63,6 +64,7 @@ function GiverPage() {
             gap: '20px',
           }}
         >
+          <FoodListingForm />
           <div
             style={{
               backgroundColor: '#f0fdf4',
