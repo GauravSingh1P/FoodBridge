@@ -5,7 +5,7 @@ function Footer() {
             width: '100%',
             background: 'linear-gradient(135deg, #16a34a, #15803d)',
             color: '#ffffff',
-            padding:'16px 24px' ,
+            padding:'20px 24px' ,
             }}
     >
       <div

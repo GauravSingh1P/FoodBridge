@@ -1,11 +1,12 @@
 import foodBridgeLogo from '../assets/foodbridge-logo.png'
+
 function Header() {
 return (
   <header
     style={{
       width: '100%',
       padding: '16px 28px',
-      background: 'rgba(255, 255, 255, 0.7)',
+      background: 'linear-gradient(135deg, #16a34a, #15803d)',
       backdropFilter: 'blur(12px)',
       borderBottom: '1px solid #d1d5db',
       position: 'sticky',
@@ -34,10 +35,12 @@ return (
           src={foodBridgeLogo}
           alt="FoodBridge"
           style={{
-            width: '42px',
-            height: '42px',
-            objectFit: 'contain',
-          }}
+                  width: '40px',
+                  height: '40px',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  transform: 'scale(1.2)',
+                }}
         />
 
         <div>
@@ -45,7 +48,7 @@ return (
             style={{
               margin: 0,
               fontSize: '22px',
-              color: '#14532d',
+              color: '#ffffff',
             }}
           >
             FoodBridge
@@ -54,7 +57,7 @@ return (
             style={{
               margin: 0,
               fontSize: '14px',
-              color: '#6b7280',
+              color: 'rgba(255,255,255,0.8)',
             }}
           >
             Donate or resell food with purpose
@@ -67,7 +70,7 @@ return (
           display: 'flex',
           gap: '22px',
           fontSize: '15px',
-          color: '#374151',
+          color: '#ffffff',
           fontWeight: '500',
         }}
       >

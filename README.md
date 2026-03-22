@@ -38,7 +38,6 @@ This MVP focuses on 3 core pages only:
 - React (Component-based architecture)  
 - React Router (Navigation)  
 - useState (State management)  
-- Minimal CSS (inline / modular)  
 
 ---
 
@@ -59,8 +58,6 @@ Instead of generic commits, this project follows a **Feature-Code Versioning Sys
 | RC   | Receiver Module    |
 | RT   | Routing            |
 | UI   | UI/Styling         |
-| DB   | Data Handling      |
-| FX   | Fixes              |
 | RF   | Refactor           |
 
 ---
@@ -128,33 +125,8 @@ Instead of generic commits, this project follows a **Feature-Code Versioning Sys
 
 **FB-RC03-v0.4:** Request/Buy actions added  
 *Reason:* Enable interaction with listings  
-
-**FB-UI03-v0.4:** Receiver UI improvements  
-*Reason:* Improve readability of listings  
-
----
-
-### Phase 5 – Data Handling (Frontend State)
-
-**FB-DB01-v0.5:** Local state management for food data  
-*Reason:* Simulate backend functionality  
-
-**FB-DB02-v0.5:** Data flow between giver and receiver  
-*Reason:* Connect both modules logically  
-
----
-
-### Phase 6 – Refinement
-
-**FB-RF01-v0.6:** Component refactoring  
-*Reason:* Improve reusability and code clarity  
-
-**FB-FX01-v0.6:** Bug fixes in form and navigation  
-*Reason:* Ensure smooth user experience  
-
----
-
-### Phase 7 – MVP Release
+ 
+### Phase 5 – MVP Release
 
 **FB-REL01-v1.0:** MVP completed  
 *Reason:* Core functionality stable and usable  
@@ -169,8 +141,6 @@ Instead of generic commits, this project follows a **Feature-Code Versioning Sys
 | v0.2   | Routing Complete           |
 | v0.3   | Giver Module Functional    |
 | v0.4   | Receiver Module Functional |
-| v0.5   | Data Flow Connected        |
-| v0.6   | Stable Build               |
 | v1.0   | MVP Release                |
 
 ---
