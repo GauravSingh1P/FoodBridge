@@ -27,7 +27,7 @@
 
 .landing-title {
   font-size: clamp(2.8rem, 6vw, 5rem);
-  line-height: 1.08;
+  line-height: 1.06;
   font-weight: 800;
   color: #14532d;
   max-width: 860px;
@@ -72,7 +72,7 @@
   display: block;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .role-description {
