@@ -120,7 +120,6 @@ function LandingPage() {
                 <h3>Landing Page</h3>
                 <p>Role-based entry for givers and receivers.</p>
               </div>
-
               <div className="point-card">
                 <h3>Giver Dashboard</h3>
                 <p>Add food listings and choose Donate or Sell.</p>

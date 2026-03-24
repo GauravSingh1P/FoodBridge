@@ -76,6 +76,10 @@ function Header() {
           <span style={{ cursor: 'pointer' }}>Home</span>
           <span style={{ cursor: 'pointer' }}>How It Works</span>
           <span style={{ cursor: 'pointer' }}>About</span>
+          <span style={{ cursor: 'pointer' }}>Login</span>
+          <span style={{ cursor: 'pointer' }}>Signup</span>
+
+          
         </nav>
       </div>
     </header>

@@ -1,27 +1,39 @@
-function FoodListingDisplay() {
-  const foodListings = [
-    {
-      id: 1,
-      foodName: 'Veg Biryani',
-      quantity: '25 plates',
-      foodType: 'Donate',
-      location: 'Whitefield, Bengaluru',
-    },
-    {
-      id: 2,
-      foodName: 'Chapati & Curry',
-      quantity: '15 boxes',
-      foodType: 'Sell',
-      location: 'Marathahalli, Bengaluru',
-    },
-    {
-      id: 3,
-      foodName: 'Rice & Dal',
-      quantity: '30 servings',
-      foodType: 'Donate',
-      location: 'KR Puram, Bengaluru',
-    },
-  ]
+import { useState, useEffect } from "react";
+
+ function FoodListingDisplay() {
+
+    const [foodListings, setFoodListings] = useState([]);
+
+    
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/reciever");
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("Fetched:", data);
+
+        setFoodListings(data); // 🔥 THIS updates UI
+
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+
+    fetchData();
+  }, [])
+
+
+
+
+
+
+    
+
 
   return (
     <div style={{ marginTop: '36px' }}>

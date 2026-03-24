@@ -7,26 +7,41 @@ function FoodListingForm() {
   const [location, setLocation] = useState('')
   const [listingType, setListingType] = useState('')
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
+ const handleSubmit = async (event) => {
+  event.preventDefault();
 
-    const foodData = {
-      foodName,
-      quantity,
-      foodType,
-      location,
-      listingType,
-    }
+  const foodData = {
+    foodName,
+    quantity,
+    foodType,
+    location,
+    listingType,
+  };
 
-    console.log('Food Listing Submitted:', foodData)
+  try {
+    const response = await fetch("http://localhost:5000/giver", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(foodData),
+    });
 
-    alert('Food listing captured successfully!')
+    const result = await response.json();
+    console.log("Server response:", result);
 
-    setFoodName('')
-    setQuantity('')
-    setFoodType('')
-    setLocation('')
+    alert("Food listing saved to backend!");
+
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Failed to send data");
   }
+
+  setFoodName('');
+  setQuantity('');
+  setFoodType('');
+  setLocation('');
+};
 
   return (
     <form
