@@ -1,5 +1,5 @@
 import foodBridgeLogo from '../assets/foodbridge-logo.png'
-
+import { Link } from 'react-router-dom'
 function Header() {
   return (
     <header
@@ -75,7 +75,16 @@ function Header() {
         >
           <span style={{ cursor: 'pointer' }}>Home</span>
           <span style={{ cursor: 'pointer' }}>How It Works</span>
-          <span style={{ cursor: 'pointer' }}>About</span>
+          <Link
+              to="/about"
+              style={{
+                cursor: 'pointer',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
+            >
+              About
+            </Link>
         </nav>
       </div>
     </header>
